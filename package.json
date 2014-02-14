@@ -1,0 +1,32 @@
+{
+  "name": "angularJS_diary",
+  "version": "0.0.0",
+  "description": "npm script",
+  "main": "app/index.html",
+  "dependencies": {
+    "karma": "~0.10.9",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-coffee-preprocessor": "~0.1.2",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.3",
+    "karma-jasmine": "~0.1.5",
+    "karma-requirejs": "~0.2.1",
+    "karma-phantomjs-launcher": "~0.1.2",
+    "karma-script-launcher": "~0.1.0",
+    "requirejs": "~2.1.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jchappypig/angularJS_diary.git"
+  },
+  "author": "Huanhuan Huang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jchappypig/angularJS_diary/issues"
+  },
+  "homepage": "https://github.com/jchappypig/angularJS_diary"
+}

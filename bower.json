@@ -1,0 +1,20 @@
+{
+  "name": "yes",
+  "version": "yes",
+  "homepage": "https://github.com/jchappypig/angularJS_diary",
+  "authors": [
+    "Huanhuan Huang <hhuang@thoughtworks.com>"
+  ],
+  "main": "app/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.12"
+  }
+}
