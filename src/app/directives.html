@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="directivesApp" class="ng-scope">
+<head>
+    <title>Directives</title>
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="directives.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../bower_components/foundation/css/foundation.css"/>
+</head>
+<body>
+<input type='text' ng-model='theirLink'/>
+<div my-directive my-link="theirLink" my-link-text2="Google"></div>
+<h1>Root</h1>
+<h4>Trying to Access root: {{ rootProperty }}</h4>
+<h4>Trying to Access parent: {{ parentProperty }}</h4>
+<h4>Trying to Access child: {{ childProperty }}</h4>
+<div ng-controller="parentController">
+    <h1>Parent</h1>
+    <h4>Trying to Access root: {{ rootProperty }}</h4>
+    <h4>Trying to Access parent: {{ parentProperty }}</h4>
+    <h4>Trying to Access child: {{ childProperty }}</h4>
+    <div ng-controller="childController">
+        <h1>Child</h1>
+        <h4>Trying to Access root: {{ rootProperty }}</h4>
+        <h4>Trying to Access parent: {{ parentProperty }}</h4>
+        <h4>Trying to Access child: {{ childProperty }}</h4>
+    </div>
+</div>
+</body>
+</html>

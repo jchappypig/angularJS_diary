@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html ng-app="" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}</style>
-    <title>Diary</title>
-    <script src="../../bower_components/angular/angular.js"></script>
-</head>
-<body>
-Say hello to:
-<input type="text" ng-model="someone" class="ng-valid ng-dirty">
-<h1 class="ng-binding">Hello {{ someone }}</h1>
-
-</body></html>
+<html ng-app="app" class="ng-scope">
+    <head>
+        <title>Diary</title>
+        <script src="../../bower_components/angular/angular.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        {{ 1234.995| number:2 }}
+        <div ng-controller="EmailController">
+            <h1 class="ng-binding">{{ name }}</h1>
+            To:
+            <input type="text" ng-model="recipient" class="ng-valid">
+            <br>
+            <textarea ng-model="emailBody"></textarea>
+            <br>
+            <pre>{{ preview }}</pre>
+        </div>
+        <div ng-controller="HelloController">
+            <h1>{{ name | uppercase }}</h1>
+            Say hello to:
+            <input type="text" ng-model="someone" class="ng-valid ng-dirty">
+            <h2 class="ng-binding">Hello {{ someone }}</h2>
+            <h5>{{ clock }}</h5>
+        </div>
+        <div ng-controller="CalculationController">
+            <h1 class="ng-binding">{{ name }}</h1>
+            <h2>My book is {{ price | currency }}</h2>
+            <button class="button" ng-click="add(1)">Add</button>
+            <button class="button" ng-click="subtract(1)">Subtract</button>
+        </div>
+        <div ng-controller="ExpressionController">
+            <h1 class="ng-binding">{{ name }}</h1>
+            <input type="text" ng-model="expression" class="ng-valid">
+            <h2>{{ result }}</h2>
+        </div>
+    </body>
+</html>

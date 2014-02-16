@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp" class="ng-scope">
+<head>
+    <title>Build-in Directives</title>
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="buildInDirectives.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../bower_components/foundation/css/foundation.css"/>
+</head>
+<body>
+<input type="text" ng-model="someProperty" placeholder="Type to Enable">
+<button ng-model="button" ng-disabled="!someProperty">A Button</button>
+
+<br>
+Click me to toggle: <input type="checkbox" ng-model="checked"><br/>
+<button ng-model="button" ng-disabled="checked">Button</button>
+<label>Select Two Fish:</label>
+<input type="checkbox"
+       ng-model="isTwoFish"><br/>
+<select>
+    <option>One Fish</option>
+    <option ng-selected="isTwoFish">Two Fish</option>
+</select>
+
+<h1>Wrong Way</h1>
+<img src="{{imgSrc}}" />
+
+<h1>Right way</h1>
+<img ng-src="{{imgSrc}}" />
+</body>
+</html>
