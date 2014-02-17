@@ -2,14 +2,16 @@
 <html ng-app="myApp" class="ng-scope">
 <head>
     <title>Build-in Directives</title>
-    <script src="../../bower_components/angular/angular.js"></script>
-    <script src="buildInDirectives.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../bower_components/foundation/css/foundation.css"/>
+    <script src="../../../bower_components/angular/angular.js"></script>
+    <script src="../js/buildInDirectives.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../bower_components/foundation/css/foundation.css"/>
 </head>
 <body>
 <input type="text" ng-model="someProperty" placeholder="Type to Enable">
 <button ng-model="button" ng-disabled="!someProperty">A Button</button>
-
+<div ng-repeat="n in ">
+    <h2>{{ n }}</h2>
+</div>
 <br>
 Click me to toggle: <input type="checkbox" ng-model="checked"><br/>
 <button ng-model="button" ng-disabled="checked">Button</button>
