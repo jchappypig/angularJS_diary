@@ -16,7 +16,11 @@
   ],
   "dependencies": {
     "foundation": "~5.1.1",
-    "jslint": "~2012.12.31"
+    "jslint": "~2012.12.31",
+    "angular-route": "~1.2.13"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "angular-mocks": "~1.2.13"
+  }
 }

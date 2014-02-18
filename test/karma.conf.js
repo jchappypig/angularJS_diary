@@ -10,20 +10,25 @@ module.exports = function (config) {
 
 
     // frameworks to use
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'requirejs'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'test-main.js',
-      '../../bower_components/angular/angular.js',
-      {pattern: '../app/js/*.js'},
-      {pattern: '**/*Spec.js'}
+      '../bower_components/jquery/dist/jquery.js',
+      '../bower_components/angular/angular.js',
+      '../bower_components/angular-route/angular-route.js',
+      '../bower_components/angular-mocks/angular-mocks.js',
+      '../node_modules/requirejs/require.js',
+      {pattern: '../src/app/js/*.js', included: false},
+      {pattern: '**/*Spec.js', included: false},
+      'test-main.js'
     ],
 
 
     // list of files to exclude
     exclude: [
+      '../app/js/main.js'
     ],
 
 
