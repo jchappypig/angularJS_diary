@@ -6,23 +6,21 @@ module.exports = function (config) {
   config.set({
 
     // base path, that will be used to resolve files and exclude
-    basePath: '.',
+    basePath: '../..',
 
 
     // frameworks to use
-    frameworks: ['jasmine', 'requirejs'],
+    frameworks: ['ng-scenario'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      '../bower_components/jquery/dist/jquery.js',
-      '../bower_components/angular/angular.js',
-      '../bower_components/angular-route/angular-route.js',
-      '../bower_components/angular-mocks/angular-mocks.js',
-      '../node_modules/requirejs/require.js',
-      {pattern: '../src/app/js/*.js', included: false},
-      {pattern: '**/*Spec.js', included: false},
-      'test-main.js'
+      'bower_components/jquery/dist/jquery.js',
+      'bower_components/angular/angular.js',
+      'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      {pattern: 'src/app/js/*.js', included: true},
+      {pattern: 'test/e2e/*Spec.js', included: true}
     ],
 
 
@@ -74,9 +72,8 @@ module.exports = function (config) {
     singleRun: true,
 
     plugins: [
-      'karma-jasmine',
-      "karma-phantomjs-launcher",
-      "karma-requirejs"
+      'karma-phantomjs-launcher',
+      'karma-ng-scenario'
     ]
   });
 };

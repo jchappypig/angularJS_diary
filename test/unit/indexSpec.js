@@ -1,5 +1,4 @@
 define([
-  'jquery', 'angular', 'angularRoute', 'angularMocks'
 ], function () {
   'use strict';
   describe('unit test: CalculationController', function () {
